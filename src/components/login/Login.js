@@ -62,7 +62,7 @@ class LoginContainer extends React.Component {
     if (posts) return <Posts posts={posts} from_name={from_name} from_id={from_id} message={message} created_time={created_time} />;
     else
       return (
-        <div id="LoginContainer">
+        <div id="Container">
           <LoginHeader title="Login" />
           <div id="loginFormContainer">
             <form id="loginForm" onSubmit={this.handleSubmit}>
@@ -110,14 +110,14 @@ class LoginContainer extends React.Component {
 
 const Posts = (props) => (
   <div id="Posts">
-    <div className="loginContainer">
-      <h1>Users</h1>
+    <div id="postsContainer">
+      <h1 id="postsHeaderTitle">Users</h1>
       <ul className="posts-list">
         <li>{props.from_name}, {props.from_id}</li>
       </ul>
     </div>
-    <div className="loginContainer">
-      <h1>Posts</h1>
+    <div id="postsContainer">
+      <h1 id="postsHeaderTitle">Posts</h1>
       <ul className="posts-list">
         <li>
           { formatDate( props.created_time ) }
@@ -130,13 +130,13 @@ const Posts = (props) => (
 );
 
 const LoginHeader = (props) => (
-  <div className="LoginHeader">
-    <div id="LoginHeaderTitle">{props.title}</div>
+  <div className="loginHeader">
+    <div id="loginHeaderTitle">{props.title}</div>
   </div>
 );
 
 const FormInput = (props) => (
-  <div className="LoginRow">
+  <div className="LoginInput">
     <input
       type={props.type}
       placeholder={props.placeholder}
@@ -146,7 +146,7 @@ const FormInput = (props) => (
 );
 
 const FormButton = (props) => (
-  <div className="LoginRow">
+  <div className="LoginButton">
     <button type="submit">{props.title}</button>
   </div>
 );
@@ -162,6 +162,14 @@ function formatDate(date) {
     hour: '2-digit',
     minute:'2-digit',
   });
+}
+
+function sortByTime(a, b) {
+  var keyA = new Date(a),
+    keyB = new Date(b);
+  if (keyA < keyB) return 1;
+  if (keyA > keyB) return -1; 
+  return 0;
 }
 
 export default Login;

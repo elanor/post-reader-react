@@ -1,68 +1,71 @@
+### post-reader-react: 
+
+A simple post reader has login window with email and name. When submitted, new token is received via API, and posts are being displayed. Lifetime of every token is limited to 1 hour.
+
 <div>Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
-## Available Scripts
+### Live here: 
 
-In the project directory, you can run:
+## Features
 
-### `yarn start`
+Task
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Create a simple post reader as a React SPA.
+Implement above using React components and CSS3.
+Retrieve the data shown in the app from the API described below.
+Concentrate on functionality, code quality and testability, not appearance.
+Any common state management, routing and/or testing library can be used.
+Using CSS toolkits and UI frameworks (bootstrap etc) is not ok. The purpose is to evaluate your coding skills, not npm skills.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Must haves:
 
-### `yarn test`
+Login Screen with email and name inputs.
+Sender list with sender name and post count ordered by name alphabetically.
+Clicking on a sender opens that sender's posts in the post list view.
+Post list where posts are ordered by creation time.
+Post order buttons to allow choosing most recent first and most recent last ordering for posts list
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Nice to haves:
 
-### `yarn build`
+Search box for senders. Any senders whose name do not contain the text entered are hidden
+Search box for posts. Any posts that do not contain the text entered are hidden
+Deep-linkable post list. This means that it is possible to enter a URL that directly selects the sender whose posts are shown.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `yarn eject`
+_Node.JS and npm must be installed. Download and install them from [here](https://nodejs.org)._
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Installing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Follow these steps to run this project in your local computer.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+$ https://github.com/elanor/post-reader-react.git
+$ cd post-reader-react
+$ npm i
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Now, to run both the project on port `3000`, run:
 
-## Learn More
+```
+$ npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Go to `http://localhost:3000` to view the app.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Built With
 
-### Code Splitting
+- [React.JS](https://reactjs.org/) -Frontend library used in the project.
+- [Supermetrics API](https://supermetrics.com/docs/product-api-getting-started/) - Used for fetching data.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Authors
 
-### Analyzing the Bundle Size
+- **Marina Layus** - [elanor](https://github.com/elanor)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## License
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is licensed under the MIT License.
