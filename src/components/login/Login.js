@@ -110,16 +110,14 @@ class LoginContainer extends React.Component {
 
 const Posts = (props) => (
   <div id="Posts">
-    <div id="postsUsersContainer">
+    <div id="postsContainer">
       <h1 id="postsHeaderTitle">Users</h1>
       <ul className="posts-list">
         <li>{props.from_name}, {props.from_id}</li>
       </ul>
     </div>
-    <div id="postsMessagesContainer">
+    <div id="postsContainer">
       <h1 id="postsHeaderTitle">Posts</h1>
-      <button title="Sort date" type="button" onClick = { (event) => sortByTime( props.created_time ) } >By Time</button>
-      <button title="Sort users" type="button" onClick = { (event) => sortByName( props.from_name ) } >By Name</button>
       <ul className="posts-list">
         <li>
           { formatDate( props.created_time ) }
@@ -166,21 +164,12 @@ function formatDate(date) {
   });
 }
 
-function sortByTime( a, b) {
-  console.log("Sort by date button clicked!");
+function sortByTime(a, b) {
   var keyA = new Date(a),
     keyB = new Date(b);
   if (keyA < keyB) return 1;
   if (keyA > keyB) return -1; 
   return 0;
 }
-
-function sortByName( a, b) {
-  console.log("Sort by name button clicked!");
-  if (a < b) return 1;
-  if (a > b) return -1; 
-  return 0;
-}; 
-
 
 export default Login;

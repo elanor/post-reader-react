@@ -4,7 +4,7 @@ A simple post reader has login window with email and name. When submitted, new t
 
 <div>Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
-### Live here: "https://elanor.github.io/post-reader-react/"
+### Live here: 
 
 ## Features
 
