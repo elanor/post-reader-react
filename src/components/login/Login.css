@@ -1,7 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans';
+	font-family: 'Open Sans';
+	/* overflow-x: hidden; */
 }
 
 #Container {
@@ -10,29 +11,31 @@ body {
     background-color: #FFFFFF;
     border-radius: 8px;
 }
-
+/* 
 #Posts {
-
+	display: block;
+	width: 100vw;	
+	justify-content: flex-start;
     background-color: #FFFFFF;
-}
+} */
 
 #postsUsersContainer {
     width: 30%;
-    margin: 50px 16px auto auto;
+    margin: auto 16px auto auto;
     border-radius: 8px;
 
     display: inline-block;
-    justify-content: space-around;
-    flex-direction: row;
+	flex-direction: column;
+	position: relative;
 }
 
 #postsMessagesContainer {
-    width: 60%;
-    margin: 50px auto;
+	width: 60%;
+	position: absolute;
+    margin: auto;
     border-radius: 8px;
 
     display: inline-block;
-    justify-content: space-around;
     flex-direction: column;
 }
 
@@ -58,6 +61,43 @@ body {
     background-color: #7DB4B5;
     border-radius: 8px 8px 0 0;
 }
+
+.large-container {
+	display: flex;
+	flex-direction: column;
+	justify-items: flex-start;
+}
+
+.createdAt {
+	width: 70%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+  border: 1px solid gray;
+  text-align: start;
+  border-radius: 3px;
+}
+
+.createdAt_copy {
+	width: auto;
+	margin: 15px 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+  border: 1px solid black;
+  text-align: start;
+  border-radius: 3px;
+}
+
+section {
+	width: 30vw;
+}
+
+.names_id {
+	padding: 10px;
+}
+
 
 #loginForm {
     width: 90%;

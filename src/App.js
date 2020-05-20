@@ -7,8 +7,8 @@ function App() {
     <div className="App">
       
       <main>
-        {/* <img className="App-logo" alt="logo" src="../interface.svg"/> */}
         <Login />
+        
       </main>
      
     </div>
