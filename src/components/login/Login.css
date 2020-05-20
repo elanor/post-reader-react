@@ -66,6 +66,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-items: flex-start;
+
 }
 
 .createdAt {
@@ -77,6 +78,7 @@ body {
   border: 1px solid gray;
   text-align: start;
   border-radius: 3px;
+  background-color: rgb(234, 247, 247);
 }
 
 .createdAt_copy {
@@ -85,17 +87,24 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   text-align: start;
   border-radius: 3px;
+  background-color: rgb(234, 247, 247);
 }
 
 section {
 	width: 30vw;
+	border: 1px solid gray;
+  text-align: start;
+  border-radius: 3px;
+  border-right: none;
+  
 }
 
 .names_id {
 	padding: 10px;
+	background-color: #7DB4B5;
 }
 
 
@@ -131,15 +140,6 @@ button {
     cursor: pointer;
 }
 
-ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-}
-
-li {
-    word-wrap: break-word;
-}
 
 
 
