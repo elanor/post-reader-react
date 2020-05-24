@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/post-reader-react/static/css/main.8acb6e54.chunk.css",
+    "main.js": "/post-reader-react/static/js/main.dcad46ee.chunk.js",
+    "main.js.map": "/post-reader-react/static/js/main.dcad46ee.chunk.js.map",
+    "runtime-main.js": "/post-reader-react/static/js/runtime-main.a29b41d3.js",
+    "runtime-main.js.map": "/post-reader-react/static/js/runtime-main.a29b41d3.js.map",
+    "static/js/2.11f99e67.chunk.js": "/post-reader-react/static/js/2.11f99e67.chunk.js",
+    "static/js/2.11f99e67.chunk.js.map": "/post-reader-react/static/js/2.11f99e67.chunk.js.map",
+    "index.html": "/post-reader-react/index.html",
+    "precache-manifest.3096af073f6fafce0629d0de91514413.js": "/post-reader-react/precache-manifest.3096af073f6fafce0629d0de91514413.js",
+    "service-worker.js": "/post-reader-react/service-worker.js",
+    "static/css/main.8acb6e54.chunk.css.map": "/post-reader-react/static/css/main.8acb6e54.chunk.css.map",
+    "static/js/2.11f99e67.chunk.js.LICENSE.txt": "/post-reader-react/static/js/2.11f99e67.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a29b41d3.js",
+    "static/js/2.11f99e67.chunk.js",
+    "static/css/main.8acb6e54.chunk.css",
+    "static/js/main.dcad46ee.chunk.js"
+  ]
+}
