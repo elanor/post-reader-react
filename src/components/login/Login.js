@@ -11,10 +11,7 @@ class LoginContainer extends React.Component {
       name: "",
       sl_token: "",
       posts: undefined,
-      from_id: [],
       from_name: [],
-      created_time: [],
-      message: [],
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,8 +19,6 @@ class LoginContainer extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log("the form is submitted!");
-
     var formdata = new FormData(event.currentTarget);
     formdata.append("client_id", "ju16a6m81mhid5ue1z3v2g0uh");
     formdata.append("email", this.state.email);
@@ -39,32 +34,6 @@ class LoginContainer extends React.Component {
       method: "GET",
       redirect: "follow",
     };
-
-    /* fetch("https://api.supermetrics.com/assignment/register?", requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        console.log("response", result);
-        console.log("token", result.data.sl_token);
-        this.setState({ sl_token: result.data.sl_token });
-      return fetch(
-          `https://api.supermetrics.com/assignment/posts?sl_token=${this.state.sl_token}`, getOptions)
-          .then((response) => response.json())
-          .then((result) => {
-            this.setState({
-              from_name: result.data.from_name,
-              from_id: result.data.from_id,
-              message: result.data.message,
-              created_time: result.data.created_time,
-              posts: result.data,
-            });    
-            console.log("result data: " + result.data);
-            console.log(result);
-          })
-      })
-     
-      .catch((error) => console.log("error", error)); */
-
-    //what Nikita suggested:
 
     fetch("https://api.supermetrics.com/assignment/register?", requestOptions)
       .then((response) => response.json())
@@ -83,10 +52,6 @@ class LoginContainer extends React.Component {
           posts: result.data.posts,
           from_name: result.data.from_name,
         });
-        /*  this.state.posts(from_name).sort();
-          var from_name_sorted =  this.state.from_name.toString(); */
-
-        console.log(result);
       })
       .catch((error) => console.log("error", error));
     return this.state.posts;
@@ -95,12 +60,19 @@ class LoginContainer extends React.Component {
   render() {
     const { posts, email, name } = this.state;
 
-   /*  const from_name = [...posts.from_name]
- .sort((a, b) => a.localeCompare(b))
- .map((item, i) => <sortedNames key={i} data={item} />); */
-    
-    if (posts) return <Posts posts={posts} />;
-    else
+    if (posts) {
+      const authors = this.state.posts
+        .map((post) => post.from_name)
+        .sort()
+        .join(", ");
+      console.log(`Names sorted by alphabet: ${authors}`);
+      const dates = this.state.posts
+        .map((post) => post.created_time)
+        .sort()
+        .join(", ");
+      console.log(`Dates sorted by creation time: ${dates.toLocaleString()}`);
+      return <Posts posts={posts} />;
+    } else
       return (
         <div id="Container">
           <LoginHeader title="Login" />
@@ -140,25 +112,16 @@ const Posts = ({ posts }) => (
   </div>
 );
 
-
-
-const Post = ({ from_name, from_id, created_at, message }) => (
+const Post = ({ from_id, created_time, message, from_name }) => (
   <div className="post">
-    <div key={from_id} className="createdAt_copy">
-      <section>
-        <h4 className="names_id">
-          {from_name}
-        </h4>
-      </section>
-
-      <div className="createdAt">
-        <h4>
-          {new Intl.DateTimeFormat("en-GB", {
-            year: "numeric",
-            month: "long",
-            day: "2-digit",
-          }).format(created_at)}{" "}
-        </h4>
+    <div key={from_id} className="name_date_post">
+      <div className="name_date_post">
+        <section>
+          <h4 className="names_id">{from_name}</h4>
+        </section>
+      </div>
+      <div className="post_instance">
+        <h4>{new Date(created_time).toLocaleString()}</h4>
         <p>{message}</p>
       </div>
     </div>

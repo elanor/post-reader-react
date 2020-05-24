@@ -4,7 +4,7 @@ A simple post reader has login window with email and name. When submitted, new t
 
 <div>Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
-### Live here: 
+### Live here: https://elanor.github.io/post-reader-react/
 
 ## Features
 
@@ -17,16 +17,16 @@ Concentrate on functionality, code quality and testability, not appearance.
 Any common state management, routing and/or testing library can be used.
 Using CSS toolkits and UI frameworks (bootstrap etc) is not ok. The purpose is to evaluate your coding skills, not npm skills.
 
-Must haves:
+Implemented features:
 
 Login Screen with email and name inputs.
-Sender list with sender name and post count ordered by name alphabetically.
-Clicking on a sender opens that sender's posts in the post list view.
-Post list where posts are ordered by creation time.
+Sender list with sender name and post count ordered by name alphabetically (made in console).
+Post list where posts are ordered by creation time (made in console).
+
+Still missing features:
+
 Post order buttons to allow choosing most recent first and most recent last ordering for posts list
-
-Nice to haves:
-
+Clicking on a sender opens that sender's posts in the post list view.
 Search box for senders. Any senders whose name do not contain the text entered are hidden
 Search box for posts. Any posts that do not contain the text entered are hidden
 Deep-linkable post list. This means that it is possible to enter a URL that directly selects the sender whose posts are shown.
